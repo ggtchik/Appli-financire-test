@@ -1,0 +1,11 @@
+{
+  "name": "quatre",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quatre — application autonome de répartition de revenus en 4 piliers (dîme, charité, besoins, investissement), multi-devises, rapports mensuels.",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "build": "node build.js"
+  },
+  "license": "MIT"
+}

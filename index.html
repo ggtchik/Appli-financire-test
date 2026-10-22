@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quatre — Répartition de revenus en 4 piliers</title>
+<meta name="description" content="Quatre — application privée de répartition automatique de vos revenus en 4 piliers : Dîme, Charité, Besoins, Investissement. Multi-devises, suivi mensuel et rapports.">
+<meta name="theme-color" content="#07080b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a0c11'/%3E%3Ccircle cx='24' cy='24' r='9' fill='%23A78BFA'/%3E%3Ccircle cx='42' cy='24' r='9' fill='%23FB7185' opacity='.9'/%3E%3Ccircle cx='24' cy='42' r='9' fill='%2338BDF8' opacity='.9'/%3E%3Ccircle cx='42' cy='42' r='9' fill='%2334D399'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true">
+  <span class="orb orb-a"></span>
+  <span class="orb orb-b"></span>
+  <span class="orb orb-c"></span>
+  <span class="grain"></span>
+</div>
+
+<div class="app" id="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </span>
+      <span class="brand-text">
+        <strong>Quatre</strong>
+        <em>Wealth allocation</em>
+      </span>
+    </div>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#/dashboard" data-route="dashboard" class="nav-item">
+        <span class="nav-ico" data-icon="grid"></span>
+        <span class="nav-label">Vue d'ensemble</span>
+      </a>
+      <a href="#/revenus" data-route="revenus" class="nav-item">
+        <span class="nav-ico" data-icon="in"></span>
+        <span class="nav-label">Revenus</span>
+      </a>
+      <a href="#/depenses" data-route="depenses" class="nav-item">
+        <span class="nav-ico" data-icon="out"></span>
+        <span class="nav-label">Dépenses</span>
+      </a>
+      <a href="#/historique" data-route="historique" class="nav-item">
+        <span class="nav-ico" data-icon="calendar"></span>
+        <span class="nav-label">Historique</span>
+      </a>
+      <a href="#/rapport" data-route="rapport" class="nav-item">
+        <span class="nav-ico" data-icon="doc"></span>
+        <span class="nav-label">Rapport</span>
+      </a>
+      <a href="#/reglages" data-route="reglages" class="nav-item nav-item--mobile">
+        <span class="nav-ico" data-icon="settings"></span>
+        <span class="nav-label">Réglages</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="mini-balance" id="mini-balance"></div>
+      <button class="profile" type="button" data-action="goto" data-route="reglages">
+        <span class="avatar" aria-hidden="true">Q</span>
+        <span class="profile-meta">
+          <strong>Mon espace</strong>
+          <em>Données locales</em>
+        </span>
+        <span class="nav-ico" data-icon="settings"></span>
+      </button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="print-head" aria-hidden="true">
+      <span class="print-brand"><span class="pm"></span>Quatre</span>
+      <span class="print-meta" id="print-meta"></span>
+    </div>
+    <div class="view" id="view" tabindex="-1"></div>
+    <footer class="app-foot">
+      <span>Quatre · vos données restent sur cet appareil.</span>
+      <span class="dot"></span>
+      <button class="link" data-action="export-json" type="button">Sauvegarder</button>
+    </footer>
+  </main>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+<div class="modal-root" id="modal-root"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
